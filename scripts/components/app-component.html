@@ -1,22 +1,11 @@
-<h1>{{ $ctrl.title | uppercase | wiecej: 10}} </h1>
+<section class="container">
+    <page-header></page-header>
 
-<!--<button ng-click="$ctrl.onTitleClick();$ctrl.title='zero'">reset</button>-->
+    <product-list class="row">
+        <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
+    </product-list>
 
-<input ng-model="$ctrl.filterProp" />
-
-<div ng-if="$ctrl.title.length === 0">za krótka nazwa</div>
-
-<table>
-    <tr>
-        <td>id</td>
-        <td>nazwa</td>
-        <td>opis</td>
-        <td>zdjęcie</td>
-    </tr>
-    <tr ng-repeat="product in $ctrl.products | filter:$ctrl.filterProp">
-        <td>{{product.id}}</td>
-        <td>{{product.name }}</td>
-        <td>{{product.description}}</td>
-        <td>{{product.image }}</td>
-    </tr>
-</table>
+    <page-footer></page-footer>
+</section>
