@@ -10,9 +10,13 @@
     <tr>
         <td>id</td>
         <td>nazwa</td>
+        <td>opis</td>
+        <td>zdjęcie</td>
     </tr>
     <tr ng-repeat="product in $ctrl.products | filter:$ctrl.filterProp">
         <td>{{product.id}}</td>
         <td>{{product.name }}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.image }}</td>
     </tr>
 </table>

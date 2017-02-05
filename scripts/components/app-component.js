@@ -9,15 +9,15 @@
     }
 
     class AppController {
-        constructor(ProductsService){
+        constructor(ProductsService/*, $scope*/){
             this.title = 'Witamy na WarsawJS'
-            let promise = ProductsService.$get().then(products => {
+            ProductsService.$get().then(products => {
                 this.products = products;
-                //$scope.apply();
-                return {"myKey":"myValue"};
+                //$scope.$apply();
+                //return {"myKey":"myValue"};
             });
 
-            promise.then(daneDwa => console.log('dane dwa: ', daneDwa))
+            //promise.then(daneDwa => console.log('dane dwa: ', daneDwa))
         }
 
         onTitleClick() {
