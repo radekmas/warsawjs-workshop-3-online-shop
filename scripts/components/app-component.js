@@ -9,32 +9,14 @@
     }
 
     class AppController {
-        constructor(ProductsService/*, $scope*/){
-            this.title = 'Witamy na WarsawJS'
+        constructor(ProductsService){
             ProductsService.$get().then(products => {
                 this.products = products;
-                //$scope.$apply();
-                //return {"myKey":"myValue"};
             });
-
-            //promise.then(daneDwa => console.log('dane dwa: ', daneDwa))
-        }
-
-        onTitleClick() {
-            console.log("clicked");
         }
     }
 
     angular.module('shop').component('app', new AppComponent);
 
-    angular.module('shop').filter('wiecej', function() { //factory function
-       return function (value, len) {
-           console.log('FILTER: ' + value)
-           if(value && value.length > len) {
-               return value.substr(0,len) + '... czytaj wiecej';
-           }
-           return value;
-       }
-    });
 }());
 
