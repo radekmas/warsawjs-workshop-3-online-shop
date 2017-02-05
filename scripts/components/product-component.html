@@ -1,12 +1,15 @@
 <div class="card small blue-grey darken-1">
     <div class="card-content white-text">
-        <h6 class="card-title">title</h6>
+        <h6 class="card-title">{{$ctrl.product.name}}</h6>
         <img
                 class="circle left"
-                ng-src="/impage/url/photo.jpg" alt=""/>
-        <p>dscription</p>
+                ng-src="{{$ctrl.product.image}}" alt="{{$ctrl.product.image}}"/>
+        <p>{{$ctrl.product.description}}</p>
     </div>
     <div class="card-action">
-        <product-add-to-cart></product-add-to-cart>
+        <!--<product-add-to-cart product-index="{{$ctrl.productIndex}}"></product-add-to-cart>-->
+        <button class="btn" ng-click="$ctrl.addToCart({ product: $ctrl.product }); $event.stopPropagation();"/>Kup</button>
+        <button class="btn" ng-click="$ctrl.onDelete({ product: $ctrl.product }); $event.stopPropagation();"/>Usuń</button>
+        <input type="number" ng-model="$ctrl.amount"/>
     </div>
 </div>

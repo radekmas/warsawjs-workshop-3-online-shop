@@ -6,9 +6,12 @@
                 Sklep internetowy
             </a>
 
+            <ul class="right">
+                <li>Koszyk ({{$ctrl.cartService.getCartSize() || 0}})</li>
+            </ul>
+
             <cart-dropdown></cart-dropdown>
         </div>
     </nav>
-
     <product-search></product-search>
 </header>

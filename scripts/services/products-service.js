@@ -4,7 +4,11 @@ function ProductsServiceFactory($http) {
             return $http.get('data/products.json')
                 .then(data => data.data.products);
 
+        },
+        $delete() {
+
         }
+
     };
 }
 angular.module('shop').factory('ProductsService', ProductsServiceFactory)

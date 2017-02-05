@@ -2,7 +2,9 @@
         class="col l4"
         ng-repeat="product in $ctrl.products track by $index">
     <product
+            ng-click="$ctrl.onProductClick(product)"
+            on-delete="$ctrl.onProductDelete(product, $index)"
             class="row"
-            data-product-index="$index"></product>
+            product="product"></product>
 </div>
 

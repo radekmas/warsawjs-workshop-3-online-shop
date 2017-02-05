@@ -43,3 +43,7 @@ product-add-to-cart .row,
 product-add-to-cart input[type="text"] {
     margin: 0;
 }
+
+.btn {
+    margin: 1px;
+}
