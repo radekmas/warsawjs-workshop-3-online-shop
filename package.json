@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "warsawjs-workshop-3-online-shop",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "live-server",
+    "api": "json-server data/products.json --static ./  --port 8080",
+    "build:mocks": "node data/products-build.js"
+  },
+  "devDependencies": {
+    "json-schema-faker": "0.4.0",
+    "json-server": "^0.9.4",
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+  }
+}
